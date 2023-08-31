@@ -16,6 +16,8 @@ Often times, players pause immediately after they die far into a level. The prob
 ## file_to_desc
 file_to_desc.exe takes a properly formatted .txt file from GDdeathLogger and re-formats it into a separate .txt file, formatted in a more reader-friendly version that you would see in a YouTube video description.
 
+## Credits
+nekitdev, for his gd.py library.
 
 ## Contributing
 If you have a bug to report or a feature you would like to be added, feel free to either open an issue or DM me on Discord (@falaflewaffel)
