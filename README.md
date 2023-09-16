@@ -2,22 +2,19 @@
 A program that logs deaths in a Geometry Dash level past a specified percentage.
 
 ## Download
-Go to the "Releases" tab and download the latest "GDdeathLogger.zip" file. Unzip the file and you'll get a folder with 2 .exe files.
+Go to the "Releases" tab and download the latest .zip file. You'll get a folder containing the .exe and another folder named 'levels'.
 
-## Usage
-Have Geometry Dash currently open and then launch the GDdeathLogger.exe file.
+# Usage
+You'll see a menu containing different selections for different tasks. Input 1, 2, or 3 to select one of them.
 
-### Respawn time 
-This is used to determine the interval that the program checks for deaths. If you input the wrong respawn time, the program may end up recording duplicate deaths or miss a death entirely.
+## 1 - GDdeathLogger
+Open GD before selecting this. Then you'll be prompted to input your respawn time, filename to record deaths to, and the ID of the level. Then just play the level.
 
-### Time to wait after logging death
-Often times, players pause immediately after they die far into a level. The problem is that this program will still record deaths, even when the game is paused. This would result in duplicate death recording. The implementation of the waiting feature, however, prevents this. For most use cases, it is recommended to set this to 10-15 seconds, though it could vary depending on if it's a challenge or a full level.
+## 2 - Convert to Description
+This takes a properly formatted file from GDdeathLogger and converts it to a reader-friendly format that is commonly used in YouTube video descriptions of level completions.
 
-## file_to_desc
-file_to_desc.exe takes a properly formatted .txt file from GDdeathLogger and re-formats it into a separate .txt file, formatted in a more reader-friendly version that you would see in a YouTube video description.
+## 3 - Exit
+What did you think this would do?
 
-## Credits
-nekitdev, for his gd.py library.
-
-## Contributing
+# Contributing
 If you have a bug to report or a feature you would like to be added, feel free to either open an issue or DM me on Discord (@falaflewaffel)
