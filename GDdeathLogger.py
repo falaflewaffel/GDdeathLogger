@@ -3,7 +3,7 @@ import sys
 import gd 
 import time
 import math
-version = 'v2.0.0'
+version = 'v2.0.1'
 
 def deathLogger():
     os.system('cls')
