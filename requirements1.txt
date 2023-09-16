@@ -1,0 +1,1 @@
+git+https://github.com/nekitdev/gd.py.git@c08bd5cf0be9cd7a65729e024ccfd3bf84f3e708
