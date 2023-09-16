@@ -22,7 +22,7 @@ def deathLogger():
         while True:
             try:
                 print('Respawn time (sec)')
-                respawnTime = float(input('[this is important to prevent duplicates or missed deaths]: ')) - 0.1 # makes sure it notices EVERY time you die
+                respawnTime = float(input('[this is important to prevent missed deaths]: ')) - 0.1 # makes sure it notices EVERY time you die
                 os.system('cls')
             except ValueError:
                 os.system('cls')
@@ -35,7 +35,7 @@ def deathLogger():
         
         print('Choose a name for the .txt file recording your deaths.')
         print('If you already have a file you want to continue with, input that instead.')
-        print('PLEASE make sure this exactly matches the level name ingame!')
+        print('If it is a locally created level, PLEASE make sure this exactly matches the level name ingame!')
         
         while True:
             print()
@@ -57,7 +57,7 @@ def deathLogger():
         if not os.path.exists(fr'{parentDirectory}\{filename}.txt'): # if the text file doesn't already exist
             while True:
                 try:
-                    levelID = int(input('Input level ID: '))
+                    levelID = int(input('Input level ID (input "0" for a created level): '))
                     os.system('cls')
                 except ValueError:
                     continue
@@ -90,10 +90,16 @@ def deathLogger():
             while True:
                 time.sleep(respawnTime)
                 
-                if memory.is_dead() and memory.get_percent() >= perSpecified and not memory.is_practice_mode() and memory.level_id == levelID and recorded_death == False:
-                    with open(f'{filename}.txt', 'a') as file:
-                        file.write(f'{math.floor(memory.get_percent())}\n')
-                        recorded_death = True
+                if memory.is_dead() and memory.get_percent() >= perSpecified and not memory.is_practice_mode() and recorded_death == False:
+                    if memory.level_id == levelID and levelID != 0:
+                        with open(f'{filename}.txt', 'a') as file:
+                            file.write(f'{math.floor(memory.get_percent())}\n')
+                            recorded_death = True
+                    
+                    if memory.level_id == levelID and levelID == 0 and memory.level_name == filename:
+                        with open(f'{filename}.txt', 'a') as file:
+                            file.write(f'{math.floor(memory.get_percent())}\n')
+                            recorded_death = True
                         
                 if recorded_death == True and memory.get_percent() < perSpecified:
                     recorded_death = False
