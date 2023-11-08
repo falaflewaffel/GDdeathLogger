@@ -17,9 +17,9 @@ This takes a properly formatted file from GDdeathLogger and converts it to a rea
 lol
 
 # Requirements (if you want to edit source)
-1. Install the packages in requirements.txt (pip install -r requirements.txt)
-2. Uninstall gd.py (current version has issues) (pip uninstall gd.py)
-3. [Make sure to have git installed] Install the package in requirements2.txt (pip install -r requirements2.txt)
+1. Install first requirements via `pip install -r requirements.txt`
+2. Uninstall gd.py via `pip uninstall gd.py` (current version has issues)
+3. **[Make sure to have git installed]** Install the package in requirements2.txt via `pip install -r requirements2.txt`
 
 # Contributing
 If you have a bug to report or a feature you would like to be added, feel free to either open an issue or DM me on Discord (@falaflewaffel)
