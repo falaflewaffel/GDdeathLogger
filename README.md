@@ -1,3 +1,6 @@
+# PLEASE READ
+Due to 2.2's release this program currently does not work.
+
 # GD Death Logger
 A program that logs deaths in a Geometry Dash level past a specified percentage.
 
