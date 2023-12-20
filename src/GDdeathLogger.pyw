@@ -282,7 +282,7 @@ def main(page: ft.Page):
 
                 # Filename checking, will add loading files later
                 if filenameField.value:
-                    if re.search('^.+\.txt$', filenameField.value):
+                    if re.search(r'^.+\.txt$', filenameField.value):
                         # only returns True if value follows [name].txt
                         filename = filenameField.value
                         filenameInvalid.visible = False
